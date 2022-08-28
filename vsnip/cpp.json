@@ -1,0 +1,21 @@
+{
+  "HeaderGuard":{
+    "prefix":["hguard"],
+    "body":[
+      "#ifndef INCLUDE_$1",
+      "#define INCLUDE_$1",
+      "\n$0\n",
+      "#endif"
+    ],
+    "description":"C/C++ header guard"
+  },
+  "ForEach":{
+    "prefix":["foreach"],
+    "body":[
+      "for(const auto& $1 : $2){",
+      "\t$0",
+			"}"
+    ],
+    "description":"C/C++ header guard"
+  }
+}
