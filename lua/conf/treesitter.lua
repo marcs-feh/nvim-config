@@ -1,11 +1,9 @@
 local configs = require 'nvim-treesitter.configs'
 
 configs.setup {
-  ensure_installed = {"c", "cpp", "python", "lua", "go", "rust", "bash",
-    "latex", "scheme", "javascript", "typescript", "html", "css", "scss",
-    "ninja", "make"},
+	ensure_installed = {},
 
-  ignore_install = {"phpdoc", "java", "v"},
+  ignore_install = {"phpdoc", "v"},
 
   highlight = { -- enable highlighting
     enable = true,
@@ -17,3 +15,4 @@ configs.setup {
   }
 }
 
+--ensure_installed = {"c", "cpp", "python", "lua", "go", "rust", "bash", "latex", "scheme", "javascript", "typescript", "html", "css", "scss", "ninja", "make"},

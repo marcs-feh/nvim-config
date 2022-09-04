@@ -9,6 +9,19 @@
     ],
     "description":"C/C++ header guard"
   },
+	"C++BoilerPlate":{
+		"prefix":["boilerplate"],
+		"body":[
+			"#include <iostream>",
+			"#include <stdexcept>",
+			"#include <cstddef>",
+			"#define print(x) std::cout << x << std::endl\n",
+			"int main(int argc, const char** argv){",
+			"\t$0\n\treturn 0;",
+			"}"
+		],
+		"description":"C boilerplate"
+	},
   "ForEach":{
     "prefix":["foreach"],
     "body":[

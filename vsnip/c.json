@@ -8,6 +8,19 @@
       "#endif"
     ],
     "description":"C/C++ header guard"
-  }
+  },
+	"CBoilerPlate":{
+		"prefix":["boilerplate"],
+		"body":[
+			"#include <stdio.h>",
+			"#include <stdlib.h>",
+			"#include <stddef.h>",
+			"#include <stdbool.h>\n",
+			"int main(int argc, const char** argv){",
+			"\t$0\n\treturn 0;",
+			"}"
+		],
+		"description":"C boilerplate"
+	}
 }
 
