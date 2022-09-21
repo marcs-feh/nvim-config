@@ -36,10 +36,7 @@ opt.foldlevelstart = 99                     -- don't auto fold
 opt.scrolloff = 8                           -- is one of my fav
 opt.sidescrolloff = 8
 
-opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
-
--- Treesitter based folding
-vim.cmd [[set foldexpr=nvim_treesitter#foldexpr()]]
+vim.cmd [[set foldexpr=nvim_treesitter#foldexpr()]] -- Treesitter based folding
 
 opt.shortmess:append "c"
 
@@ -48,5 +45,8 @@ vim.g.python_recommended_style = 0
 
 -- Colorsheme
 vim.cmd [[color codedark]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+
+-- Stop making lines comments when pressing o, this abomination is required
+-- because vim's ftplugins are fucking retarded.
+vim.cmd [[autocmd FileType * set formatoptions-=o]]
 

@@ -1,0 +1,16 @@
+{
+	"CProject":{
+    "prefix":["cproject"],
+    "body":[
+			"cc = clang",
+			"ld = clang",
+			"cflags = -O2 -g -pipe -std=c17 -Wall -Wextra",
+			"ldflags =\n",
+			"rule cc",
+			"  command = \\$cc \\$cflags -c \\$in -o \\$out\n",
+			"rule link",
+			"  command = \\$ld \\$in -o \\$out \\$ldflags\n\n$0"
+    ],
+    "description":"C project boilerplate for Ninja"
+	}
+}
