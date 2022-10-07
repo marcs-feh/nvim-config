@@ -1,39 +1,73 @@
 local opt = vim.opt
 
-opt.backup = false                          -- creates a backup file
-opt.hidden = true                           -- Required to keep multiple buffers open
-opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
-opt.cmdheight = 1                           -- more space in the neovim command line for displaying messages
-opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
-opt.conceallevel = 0                        -- so that `` is visible in markdown files
-opt.fileencoding = "utf-8"                  -- the encoding written to a file
-opt.hlsearch = true                         -- highlight all matches on previous search pattern
-opt.ignorecase = true                       -- ignore case in search patterns
-opt.mouse = "a"                             -- allow the mouse to be used in neovim
-opt.pumheight = 10                          -- pop up menu height
-opt.showmode = false                        -- we don't need to see things like -- INSERT -- anymore
-opt.showtabline = 2                         -- always show tabs
-opt.smartcase = true                        -- smart case
-opt.splitbelow = true                       -- force all horizontal splits to go below current window
-opt.splitright = true                       -- force all vertical splits to go to the right of current window
-opt.swapfile = false                        -- creates a swapfile
-opt.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
-opt.undofile = true                         -- enable persistent undo
-opt.updatetime = 300                        -- faster completion (4000ms default)
-opt.smartindent = true                      -- make indenting smarter again
-opt.writebackup = false                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-opt.expandtab = false                       -- convert tabs to spaces
-opt.tabstop = 2                             -- insert 2 spaces for a tab
-opt.shiftwidth = 2                          -- the number of spaces inserted for each indentation
-opt.cursorline = false                      -- highlight the current line
-opt.number = true                           -- set numbered lines
-opt.relativenumber = false                  -- set relative numbered lines
-opt.numberwidth = 2                         -- set number column width to 2 {default 4}
-opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
-opt.wrap = false                            -- display lines as one long line
-opt.foldmethod = 'expr'                     -- required for TS folding
-opt.foldlevelstart = 99                     -- don't auto fold
-opt.scrolloff = 8                           -- is one of my fav
+-- Creates a backup file
+opt.backup = false
+-- Required to keep multiple buffers open
+opt.hidden = true
+-- Allows neovim to access the system clipboard
+opt.clipboard = "unnamedplus"
+-- Command line height
+opt.cmdheight = 1
+-- Mostly just for cmp
+opt.completeopt = { "menuone", "noselect" }
+-- So that `` is visible in markdown files
+opt.conceallevel = 0
+-- The encoding written to a file
+opt.fileencoding = "utf-8"
+-- Highlight all matches on previous search pattern
+opt.hlsearch = true
+-- Ignore case in search patterns
+opt.ignorecase = true
+-- Allow the mouse to be used in neovim
+opt.mouse = "a"
+-- Pop up menu height
+opt.pumheight = 10
+-- Don't show things like -- INSERT -- anymore
+opt.showmode = false
+-- Always show tabs
+opt.showtabline = 2
+-- Smart case
+opt.smartcase = true
+-- Force all horizontal splits to go below current window
+opt.splitbelow = true
+-- Force all vertical splits to go to the right of current window
+opt.splitright = true
+-- Creates a swapfile
+opt.swapfile = false
+-- Time to wait for a mapped sequence to complete (in milliseconds)
+opt.timeoutlen = 1000
+-- Enable persistent undo
+opt.undofile = true
+-- Faster completion
+opt.updatetime = 300
+-- Make indenting smarter
+opt.smartindent = true
+-- If a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+opt.writebackup = false
+-- Convert tabs to spaces
+opt.expandtab = false
+-- Insert 2 spaces for a tab
+opt.tabstop = 2
+-- The number of spaces inserted for each indentation
+opt.shiftwidth = 2
+-- Highlight the current line
+opt.cursorline = false
+-- Numbered lines
+opt.number = true
+-- Relative numbered lines
+opt.relativenumber = false
+-- Number column width
+opt.numberwidth = 2
+-- Always show the sign column
+opt.signcolumn = "yes"
+-- Display lines as one long line
+opt.wrap = false
+-- Required for Treesitter folding
+opt.foldmethod = 'expr'
+-- Don't auto fold
+opt.foldlevelstart = 99
+-- Start scrolling N spaces early before hitting an editor wall.
+opt.scrolloff = 8
 opt.sidescrolloff = 8
 
 vim.cmd [[set foldexpr=nvim_treesitter#foldexpr()]] -- Treesitter based folding
