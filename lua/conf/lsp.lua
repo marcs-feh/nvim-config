@@ -1,25 +1,27 @@
-local LSP = require 'lspconfig'
+local M = {}
 
-local available_servers = {
+M.available_servers = {
+	-- server name    enabled?
 	['sumneko_lua'] = true, -- Lua
 	['clangd']      = true, -- C/C++
 	['gopls']       = true, -- Go
 	['bashls']      = true, -- Bash, sh
 	['pyright']     = true, -- Python
-
+	-- Use :help lspconfig-all to learn more about other servers
 }
 
-local server_configs = {
+--- Server specific configuration
+M.server_configs = {
 	-- Lua
 	['sumneko_lua'] = {
 		settings = {
-			diagnostics = {
-				-- Get the language server to recognize the `vim` global
-				globals = {'vim'},
-			},
 			workspace = {
 				-- Make the server aware of Neovim runtime files
 				library = vim.api.nvim_get_runtime_file("", true),
+			},
+			diagnostics = {
+				-- Get the language server to recognize the `vim` global
+				globals = {'vim'},
 			},
 			-- Do not send telemetry data containing a randomized but unique identifier
 			telemetry = {
@@ -30,11 +32,17 @@ local server_configs = {
 }
 
 -- Setup servers
-for server, enabled in pairs(available_servers) do
-	if enabled then
-		-- If there's no config for that server just use an empty table
-		local cfg = server_configs[server] or {}
-		LSP[server].setup(cfg)
+--[[
+function M.setup_servers()
+	for server, enabled in pairs(M.available_servers) do
+		if enabled then
+			-- If there's no config for that server just use an empty table
+			local cfg = M.server_configs[server] or {}
+			LSP[server].setup(cfg)
+		end
 	end
 end
+]]
 
+-- Return server list for other modules to use
+return M

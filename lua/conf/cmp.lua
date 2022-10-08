@@ -1,7 +1,9 @@
+local LSP = require 'lspconfig'
+local lspconf = require 'conf.lsp'
 local cmp = require 'cmp'
 
 local has_words_before = function()
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
@@ -34,8 +36,9 @@ cmp.setup({
           cmp.select_next_item()
         elseif vim.fn["vsnip#available"](1) == 1 then
           feedkey("<Plug>(vsnip-expand-or-jump)", "")
+				--[[
         elseif has_words_before() then
-          cmp.complete()
+          cmp.complete()]]
         else
           fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
         end
@@ -69,13 +72,11 @@ cmp.setup.cmdline(':', {
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-require('lspconfig')['clangd'].setup {
-  capabilities = capabilities
-}
-require('lspconfig')['sumneko_lua'].setup {
-  capabilities = capabilities
-}
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
--- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
--- capabilities = capabilities
--- }
+for server, enabled in pairs(lspconf.available_servers) do
+	if enabled then
+		local cfg = lspconf.server_configs[server] or {}
+		cfg.capabilities = capabilities -- update with cmp capabilities
+		LSP[server].setup(cfg)
+	end
+end
+
