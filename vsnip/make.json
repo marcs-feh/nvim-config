@@ -1,0 +1,16 @@
+{
+  "CBoilerplate":{
+    "prefix":["boilerplate"],
+    "body":[
+			"CC = clang",
+			"LD = clang -fuse-ld=mold",
+			"CFLAGS = -O2 -pipe -march=native -Wall -Wextra -Wvla",
+			"LDFLAGS = -L./lib",
+			"D_CFLAGS = -g",
+			"D_LDFLAGS = -lasan -lubsan\n",
+			".PHONY: clean\n"
+    ],
+    "description":"C/C++ header guard"
+  }
+}
+

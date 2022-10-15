@@ -1,0 +1,13 @@
+{
+	"c/c++":{
+    "prefix":["c"],
+    "body":[
+      "bin/*",
+      "*.o",
+      "*.a",
+      "*.so",
+			".ninja_log"
+    ],
+    "description":"c/c++ gitignore"
+  }
+}

@@ -68,9 +68,10 @@ opt.foldmethod = 'expr'
 opt.foldlevelstart = 99
 -- Start scrolling N spaces early before hitting an editor wall.
 opt.scrolloff = 8
-opt.sidescrolloff = 8
+opt.sidescrolloff = 12
 
-vim.cmd [[set foldexpr=nvim_treesitter#foldexpr()]] -- Treesitter based folding
+-- Treesitter based folding
+vim.cmd [[set foldexpr=nvim_treesitter#foldexpr()]]
 
 opt.shortmess:append "c"
 
