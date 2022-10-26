@@ -3,6 +3,9 @@ require 'core.options'
 require 'core.keys'
 require 'core.plugins'
 
+--- Local user scripts
+require 'local.lsp-utils'
+
 --- LSP configs
 require 'conf.lsp'
 

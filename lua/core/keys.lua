@@ -5,15 +5,6 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
-function ExecString(str)
-  local f = io.popen(str)
-  if f then
-    for l in f:lines() do
-      print(l)
-    end
-    f:close()
-  end
-end
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -31,6 +22,9 @@ vim.g.maplocalleader = " "
 -- Save
 keymap("n", "<C-s>", ":w<CR>", opts)
 
+-- Open file to edit
+keymap("n", "<leader>e", ":FZF<CR>", opts)
+
 -- Clear search highlight
 keymap("n", "<leader>l", ":noh<CR>", opts)
 
@@ -43,9 +37,6 @@ keymap("n", "<leader>F", ":folddoclose foldopen<CR>", opts)
 --keymap("n", "<leader><C-f>", ":folddoopen foldclose<CR>", opts)
 
 -- Show current buffers
-keymap("n", "<leader>b", ":buffers<CR>", opts)
-
---
 keymap("n", "<leader>b", ":buffers<CR>", opts)
 
 -- Split windows
@@ -70,13 +61,14 @@ keymap("n", "<C-A-h>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-A-l>", ":vertical resize +2<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<leader>e", ":FZF<CR>", opts)
 keymap("n", "<C-j>", ":m .+1<CR>==", opts)
 keymap("n", "<C-k>", ":m .-2<CR>==", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+-- New buffer
+keymap("n", "<leader>n", ":enew<CR>", opts)
 
 -- LSP shortcuts
 keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts)
@@ -90,6 +82,10 @@ keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>", opts)
 keymap("n", "<C-S-K>", ":lua vim.lsp.buf.signature_help()<CR>", opts)
 keymap("n", "<leader>af", ":lua vim.lsp.buf.code_action()<CR>", opts)
 keymap("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", opts)
+-- List clients
+keymap("n", "<leader>Q", ":lua Lsp_utils.list_clients()<CR>", opts)
+-- Stop LSP
+keymap("n", "<leader>S", ":LspStop<CR>", opts)
 
 -- Insert --
 -- nothing :P
@@ -98,9 +94,6 @@ keymap("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
-
--- Run line
-keymap("v", "<leader>R", "d:redir @a<CR>:lua print(ExecString('<C-R>\"'))<CR>:redir END<CR>i<C-R>a<ESC><C-L>", opts)
 
 --i have tree procs
 
