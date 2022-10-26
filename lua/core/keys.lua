@@ -28,6 +28,9 @@ keymap("n", "<leader>e", ":FZF<CR>", opts)
 -- Clear search highlight
 keymap("n", "<leader>l", ":noh<CR>", opts)
 
+-- Clear trailing whitespace
+keymap("n", "<leader>W", ":%s/\\s\\+$//<CR>", opts)
+
 -- Folding
 --- Close
 keymap("n", "<leader>f", ":foldclose<CR>", opts)
