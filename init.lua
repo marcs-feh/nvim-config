@@ -15,5 +15,6 @@ require 'conf.lsp_installer'
 require 'conf.lualine'
 require 'conf.treesitter'
 require 'conf.vsnip'
+require 'conf.telescope'
 
 

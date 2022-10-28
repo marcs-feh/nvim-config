@@ -23,7 +23,7 @@ vim.g.maplocalleader = " "
 keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- Open file to edit
-keymap("n", "<leader>e", ":FZF<CR>", opts)
+keymap("n", "<leader>e", ":Telescope find_files<CR>", opts)
 
 -- Clear search highlight
 keymap("n", "<leader>l", ":noh<CR>", opts)
@@ -54,8 +54,8 @@ keymap("n", "<A-h>", "<C-w>h", opts)
 keymap("n", "<A-j>", "<C-w>j", opts)
 keymap("n", "<A-k>", "<C-w>k", opts)
 keymap("n", "<A-l>", "<C-w>l", opts)
-keymap("n", "<A-q>", ":close<CR>", opts)
-keymap("n", "<A-x>", ":bdelete!<CR>", opts)
+keymap("n", "<leader>q", ":close<CR>", opts)
+keymap("n", "<leader>X", ":bdelete!<CR>", opts)
 
 -- Resize windows
 keymap("n", "<C-A-k>", ":resize +2<CR>", opts)
