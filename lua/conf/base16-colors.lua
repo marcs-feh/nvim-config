@@ -1,5 +1,5 @@
---- This Code was taken from https://github.com/RRethy/nvim-base16
---- Modifications that deviate from the orignal might have been made.
+--- This Code was taken originally from RRethy/nvim-base16
+--- Some modifications might have been made.
 --[[
 	MIT License
 	Copyright (c) 2022 Adam Regasz-Rethy
