@@ -5,6 +5,7 @@ require 'core.plugins'
 
 --- Local user scripts
 require 'local.lsp-utils'
+require 'local.cycle-themes'
 
 --- LSP configs
 require 'conf.lsp'

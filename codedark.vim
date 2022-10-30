@@ -65,9 +65,15 @@ endif
 " General appearance colors:
 " (some of them may be unused)
 
+" Transparent background
+if !exists("g:codedark_transparent")
+    let g:codedark_transparent=0
+endif
+
 let s:cdNone = {'gui': 'NONE', 'cterm': 'NONE', 'cterm256': 'NONE'}
 let s:cdFront = {'gui': '#D4D4D4', 'cterm': s:cterm05, 'cterm256': '188'}
 let s:cdBack = {'gui': '#1E1E1E', 'cterm': s:cterm00, 'cterm256': '234'}
+if g:codedark_transparent | let s:cdBack = {'gui': 'NONE', 'cterm': 'NONE', 'cterm256': 'NONE'} | endif
 
 let s:cdTabCurrent = {'gui': '#1E1E1E', 'cterm': s:cterm00, 'cterm256': '234'}
 let s:cdTabOther = {'gui': '#2D2D2D', 'cterm': s:cterm01, 'cterm256': '236'}
@@ -141,10 +147,10 @@ call <sid>hi('ColorColumn', {}, s:cdCursorDarkDark, 'none', {})
 call <sid>hi('Cursor', s:cdCursorDark, s:cdCursorLight, 'none', {})
 call <sid>hi('CursorLine', {}, s:cdCursorDarkDark, 'none', {})
 call <sid>hi('CursorColumn', {}, s:cdCursorDarkDark, 'none', {})
-call <sid>hi('Directory', s:cdBlue, s:cdBack, 'none', {})
-call <sid>hi('DiffAdd', {}, s:cdDiffGreenLight, 'none', {})
-call <sid>hi('DiffChange', {}, s:cdDiffBlue, 'none', {})
-call <sid>hi('DiffDelete', {}, s:cdDiffRedLight, 'none', {})
+call <sid>hi('Directory', s:cdBlue, s:cdNone, 'none', {})
+call <sid>hi('DiffAdd', s:cdFront, s:cdDiffGreenLight, 'none', {})
+call <sid>hi('DiffChange', s:cdFront, s:cdDiffBlue, 'none', {})
+call <sid>hi('DiffDelete', s:cdFront, s:cdDiffRedLight, 'none', {})
 call <sid>hi('DiffText', s:cdBack, s:cdDiffBlueLight, 'none', {})
 call <sid>hi('EndOfBuffer', s:cdLineNumber, s:cdBack, 'none', {})
 call <sid>hi('ErrorMsg', s:cdRed, s:cdBack, 'none', {})
@@ -176,6 +182,7 @@ call <sid>hi('Visual', s:cdNone, s:cdSelection, 'none', {})
 call <sid>hi('VisualNOS', s:cdNone, s:cdSelection, 'none', {})
 call <sid>hi('WarningMsg', s:cdOrange, s:cdBack, 'none', {})
 call <sid>hi('WildMenu', s:cdNone, s:cdSelection, 'none', {})
+call <sid>hi('netrwMarkFile', s:cdFront, s:cdSelection, 'none', {})
 
 " Legacy groups for official git.vim and diff.vim syntax
 hi! link diffAdded DiffAdd
@@ -223,7 +230,7 @@ call <sid>hi('Debug', s:cdFront, {}, 'none', {})
 call <sid>hi('Underlined', s:cdNone, {}, 'underline', {})
 call <sid>hi("Conceal", s:cdFront, s:cdBack, 'none', {})
 
-call <sid>hi('Ignore', s:cdFront, {}, 'none', {})
+call <sid>hi('Ignore', s:cdBack, {}, 'none', {})
 
 call <sid>hi('Error', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
 
@@ -273,7 +280,7 @@ call <sid>hi('TSKeywordFunction', s:cdBlue, {}, 'none', {})
 call <sid>hi('TSKeywordOperator', s:cdBlue, {}, 'none', {})
 call <sid>hi('TSOperator', s:cdFront, {}, 'none', {})
 call <sid>hi('TSException', s:cdPink, {}, 'none', {})
-call <sid>hi('TSType', s:cdBlue, {}, 'none', {})
+call <sid>hi('TSType', s:cdBlueGreen, {}, 'none', {})
 call <sid>hi('TSTypeBuiltin', s:cdBlue, {}, 'none', {})
 call <sid>hi('TSStructure', s:cdLightBlue, {}, 'none', {})
 call <sid>hi('TSInclude', s:cdPink, {}, 'none', {})
@@ -293,6 +300,12 @@ call <sid>hi('TSTag', s:cdBlue, {}, 'none', {})
 call <sid>hi('TSTagDelimiter', s:cdGray, {}, 'none', {})
 
 " Markdown:
+call <sid>hi('markdownH1', s:cdBlue, {}, 'bold', {})
+call <sid>hi('markdownH2', s:cdBlue, {}, 'bold', {})
+call <sid>hi('markdownH3', s:cdBlue, {}, 'bold', {})
+call <sid>hi('markdownH4', s:cdBlue, {}, 'bold', {})
+call <sid>hi('markdownH5', s:cdBlue, {}, 'bold', {})
+call <sid>hi('markdownH6', s:cdBlue, {}, 'bold', {})
 call <sid>hi('markdownBold', s:cdBlue, {}, 'bold', {})
 call <sid>hi('markdownCode', s:cdOrange, {}, 'none', {})
 call <sid>hi('markdownRule', s:cdBlue, {}, 'bold', {})
