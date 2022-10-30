@@ -82,6 +82,7 @@ vim.g.python_recommended_style = 0
 
 --vim.cmd [[colorscheme base16-chalk]]
 local col = require 'base16-colorscheme'
+local hi = col.highlight
 
 col.setup({
 	base00 = '#191919', -- Default bg*
@@ -99,8 +100,11 @@ col.setup({
 	base0C = '#d0d0d0', -- Support/Regex*
 	base0D = '#DCDCAA', -- Functions*
 	base0E = '#C586C0', -- Keywords*
-	base0F = '#eeeeee', -- Punctuation/Deprecated
+	base0F = '#d4d4d4', -- Punctuation/Deprecated
 })
+
+-- Override "string colored" tabline
+hi.TabLineSel  = { guifg = col.colors.base05, guibg = col.colors.base01, gui = 'none', guisp = nil }
 
 -- Stop making lines comments when pressing o, this abomination is required
 -- because vim's ftplugins are fucking retarded.
