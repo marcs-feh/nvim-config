@@ -59,8 +59,12 @@ return packer.startup(function(use)
 	use {'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	     requires = { {'nvim-lua/plenary.nvim'} }
 	}
+
 	-- Base16 colorscheme
 	use 'RRethy/nvim-base16'
+
+	-- CodeDark colorscheme
+	use 'Mofiqul/vscode.nvim'
 
   -- Automatically set up your config after cloning packer.nvim
   -- Put this at the end after all plugins

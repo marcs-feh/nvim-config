@@ -79,29 +79,13 @@ opt.shortmess:append "c"
 vim.g.python_recommended_style = 0
 
 -- Colorsheme
-
---vim.cmd [[colorscheme base16-chalk]]
-local col = require 'base16-colorscheme'
-local hi = col.highlight
-
-col.setup({
-	base00 = '#191919', -- Default bg
-	base01 = '#2D2D30', -- Light bg / Statusbar
-	base02 = '#264F78', -- Selection bg
-	base03 = '#6A9955', -- Comments
-	base04 = '#5A5A5A', -- Dark fg / Statusbar
-	base05 = '#d4d4d4', -- Default fg
-	base06 = '#bbbbbb', -- Light fg
-	base07 = '#2D2D30', -- Light bg
-	base08 = '#9CDCFE', -- Variables
-	base09 = '#B5CEA8', -- Literals
-	base0A = '#569cd6', -- Types
-	base0B = '#CE9178', -- Strings
-	base0C = '#d0d0d0', -- Support/Regex
-	base0D = '#DCDCAA', -- Functions
-	base0E = '#C586C0', -- Keywords
-	base0F = '#d4d4d4', -- Punctuation/Deprecated
+require('vscode').setup({
+	transparent = true,
 })
+
+-- vim.cmd [[colorscheme base16-chalk]]
+-- local col = require 'base16-colorscheme'
+-- local hi = col.highlight
 
 -- Override "string colored" tabline
 hi.TabLineSel  = { guifg = col.colors.base05, guibg = col.colors.base00, gui = 'none', guisp = nil }

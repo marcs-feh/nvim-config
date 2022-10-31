@@ -18,4 +18,3 @@ require 'conf.treesitter'
 require 'conf.vsnip'
 require 'conf.telescope'
 
-
