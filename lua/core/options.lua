@@ -79,11 +79,15 @@ opt.shortmess:append "c"
 vim.g.python_recommended_style = 0
 
 -- Colorsheme
+local c = require('vscode.colors')
 require('vscode').setup({
 	transparent = true,
+	group_overrides = {
+		['@type'] = {fg=c.vscBlue},
+	},
 })
 
---vim.cmd [[colorscheme base16-chalk]]
+-- vim.cmd [[colorscheme base16-chalk]]
 -- local col = require 'base16-colorscheme'
 -- local hi = col.highlight
 
