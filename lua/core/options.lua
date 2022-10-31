@@ -83,14 +83,13 @@ require('vscode').setup({
 	transparent = true,
 })
 
--- vim.cmd [[colorscheme base16-chalk]]
+--vim.cmd [[colorscheme base16-chalk]]
 -- local col = require 'base16-colorscheme'
 -- local hi = col.highlight
 
 -- Override "string colored" tabline
-hi.TabLineSel  = { guifg = col.colors.base05, guibg = col.colors.base00, gui = 'none', guisp = nil }
+-- hi.TabLineSel  = { guifg = col.colors.base05, guibg = col.colors.base00, gui = 'none', guisp = nil }
 
 -- Stop making lines comments when pressing o, this abomination is required
 -- because vim's ftplugins are fucking retarded.
 vim.cmd [[autocmd FileType * set formatoptions-=o]]
-
