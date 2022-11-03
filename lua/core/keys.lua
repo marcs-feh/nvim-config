@@ -23,7 +23,10 @@ vim.g.maplocalleader = " "
 keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- Open file to edit
-keymap("n", "<leader>e", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>o", ":Telescope find_files<CR>", opts)
+
+-- Open buffers
+keymap("n", "<leader>e", ":Telescope buffers<CR>", opts)
 
 -- Clear search highlight
 keymap("n", "<leader>l", ":noh<CR>", opts)

@@ -31,7 +31,7 @@ M.server_configs = {
 	},
 }
 
--- Setup servers
+-- Setup servers done in cmp.lua
 --[[
 function M.setup_servers()
 	for server, enabled in pairs(M.available_servers) do
