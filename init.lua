@@ -7,7 +7,8 @@ require 'core.plugins'
 require 'local.lsp-utils'
 
 --- LSP configs
-require 'conf.lsp'
+local LSP = require 'conf.lsp'
+LSP.setup_servers()
 
 --- Plugin configs
 require 'conf.cmp'

@@ -34,6 +34,9 @@ keymap("n", "<leader>l", ":noh<CR>", opts)
 -- Clear trailing whitespace
 keymap("n", "<leader>W", ":%s/\\s\\+$//<CR>", opts)
 
+-- Open config for editing
+keymap("n", "<C-A-c>", ":e ~/.config/nvim/<CR>", opts)
+
 -- Folding
 --- Close
 keymap("n", "<leader>f", ":foldclose<CR>", opts)

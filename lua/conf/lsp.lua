@@ -1,4 +1,5 @@
 local M = {}
+local LSP = require 'lspconfig'
 
 M.available_servers = {
 	-- server name    enabled?
@@ -7,8 +8,11 @@ M.available_servers = {
 	['gopls']       = true, -- Go
 	['bashls']      = true, -- Bash, sh
 	['pyright']     = true, -- Python
+	['emmet_ls']    = true, -- HTML
 	-- Use :help lspconfig-all to learn more about other servers
 }
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 --- Server specific configuration
 M.server_configs = {
@@ -32,17 +36,16 @@ M.server_configs = {
 }
 
 -- Setup servers done in cmp.lua
---[[
 function M.setup_servers()
 	for server, enabled in pairs(M.available_servers) do
 		if enabled then
 			-- If there's no config for that server just use an empty table
 			local cfg = M.server_configs[server] or {}
+			cfg.capabilities = capabilities
 			LSP[server].setup(cfg)
 		end
 	end
 end
-]]
 
 -- Return server list for other modules to use
 return M

@@ -51,7 +51,7 @@ opt.tabstop = 2
 -- The number of spaces inserted for each indentation
 opt.shiftwidth = 2
 -- Highlight the current line
-opt.cursorline = false
+opt.cursorline = true
 -- Numbered lines
 opt.number = true
 -- Relative numbered lines
@@ -84,6 +84,7 @@ require('vscode').setup({
 	transparent = true,
 	group_overrides = {
 		['@type'] = {fg=c.vscBlue},
+		['CursorLine'] = {bg=nil}
 	},
 })
 
@@ -92,3 +93,4 @@ require('vscode').setup({
 -- Stop making lines comments when pressing o, this abomination is required
 -- because vim's ftplugins are fucking retarded.
 vim.cmd [[autocmd FileType * set formatoptions-=o]]
+

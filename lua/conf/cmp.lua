@@ -1,4 +1,3 @@
-local LSP = require 'lspconfig'
 local lspconf = require 'conf.lsp'
 local cmp = require 'cmp'
 
@@ -68,15 +67,4 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
-
--- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-
-for server, enabled in pairs(lspconf.available_servers) do
-	if enabled then
-		local cfg = lspconf.server_configs[server] or {}
-		cfg.capabilities = capabilities -- update with cmp capabilities
-		LSP[server].setup(cfg)
-	end
-end
 
