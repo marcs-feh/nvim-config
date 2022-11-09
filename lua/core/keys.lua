@@ -34,6 +34,9 @@ keymap("n", "<leader>l", ":noh<CR>", opts)
 -- Clear trailing whitespace
 keymap("n", "<leader>W", ":%s/\\s\\+$//<CR>", opts)
 
+-- Select all
+keymap("n", "<C-a>", ":normal ggVG<CR>", opts)
+
 -- Open config for editing
 keymap("n", "<C-A-c>", ":e ~/.config/nvim/<CR>", opts)
 
@@ -76,6 +79,7 @@ keymap("n", "<C-k>", ":m .-2<CR>==", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
 -- New buffer
 keymap("n", "<leader>n", ":enew<CR>", opts)
 
