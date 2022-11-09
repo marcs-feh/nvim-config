@@ -1,20 +1,17 @@
 --- Core configs
-require 'core.options'
-require 'core.keys'
-require 'core.plugins'
-
---- Local user scripts
-require 'local.lsp-utils'
+require 'user.options'
+require 'user.keys'
+require 'user.plugins'
 
 --- LSP configs
-local LSP = require 'conf.lsp'
+local LSP = require 'user.conf.lsp'
 LSP.setup_servers()
 
 --- Plugin configs
-require 'conf.cmp'
-require 'conf.lsp_installer'
-require 'conf.lualine'
-require 'conf.treesitter'
-require 'conf.vsnip'
-require 'conf.telescope'
+require 'user.conf.cmp'
+require 'user.conf.lsp_installer'
+require 'user.conf.lualine'
+require 'user.conf.treesitter'
+require 'user.conf.vsnip'
+require 'user.conf.telescope'
 

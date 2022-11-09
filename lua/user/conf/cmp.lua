@@ -1,4 +1,4 @@
-local lspconf = require 'conf.lsp'
+local lspconf = require 'user.conf.lsp'
 local cmp = require 'cmp'
 
 local has_words_before = function()
