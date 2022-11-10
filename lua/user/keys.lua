@@ -64,6 +64,7 @@ keymap("n", "<A-j>", "<C-w>j", opts)
 keymap("n", "<A-k>", "<C-w>k", opts)
 keymap("n", "<A-l>", "<C-w>l", opts)
 keymap("n", "<leader>q", ":close<CR>", opts)
+keymap("n", "<leader>x", ":bdelete<CR>", opts)
 keymap("n", "<leader>X", ":bdelete!<CR>", opts)
 
 -- Resize windows

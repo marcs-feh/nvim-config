@@ -1,79 +1,83 @@
-local opt = vim.opt
+local options = {
+	-- Creates a backup file,
+	backup = false,
+	-- Required to keep multiple buffers open,
+	hidden = true,
+	-- Allows neovim to access the system clipboard,
+	clipboard = "unnamedplus",
+	-- Command line height,
+	cmdheight = 1,
+	-- Mostly just for cmp,
+	completeopt = { "menuone", "noselect" },
+	-- So that `` is visible in markdown files,
+	conceallevel = 0,
+	-- The encoding written to a file,
+	fileencoding = "utf-8",
+	-- Highlight all matches on previous search pattern,
+	hlsearch = true,
+	-- Ignore case in search patterns,
+	ignorecase = true,
+	-- Allow the mouse to be used in neovim,
+	mouse = "a",
+	-- Pop up menu height,
+	pumheight = 10,
+	-- Don't show things like -- INSERT -- anymore,
+	showmode = false,
+	-- Always show tabs,
+	showtabline = 2,
+	-- Smart case,
+	smartcase = true,
+	-- Force all horizontal splits to go below current window,
+	splitbelow = true,
+	-- Force all vertical splits to go to the right of current window,
+	splitright = true,
+	-- Creates a swapfile,
+	swapfile = false,
+	-- Time to wait for a mapped sequence to complete (in milliseconds),
+	timeoutlen = 1000,
+	-- Enable persistent undo,
+	undofile = true,
+	-- Faster completion,
+	updatetime = 300,
+	-- Make indenting smarter,
+	smartindent = true,
+	-- If a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited,
+	writebackup = false,
+	-- Convert tabs to spaces,
+	expandtab = false,
+	-- Insert 2 spaces for a tab,
+	tabstop = 2,
+	-- The number of spaces inserted for each indentation,
+	shiftwidth = 2,
+	-- Highlight the current line,
+	cursorline = true,
+	-- Numbered lines,
+	number = true,
+	-- Relative numbered lines,
+	relativenumber = false,
+	-- Number column width,
+	numberwidth = 2,
+	-- Always show the sign column,
+	signcolumn = "yes",
+	-- Display lines as one long line,
+	wrap = false,
+	-- Required for Treesitter folding,
+	foldmethod = 'expr',
+	-- Treesitter based folding
+	foldexpr = 'nvim_treesitter#foldexpr()',
+	-- Don't auto fold,
+	foldlevelstart = 99,
+	-- Start scrolling N spaces early before hitting an editor wall.,
+	scrolloff = 8,
+	sidescrolloff = 12,
+}
 
--- Creates a backup file
-opt.backup = false
--- Required to keep multiple buffers open
-opt.hidden = true
--- Allows neovim to access the system clipboard
-opt.clipboard = "unnamedplus"
--- Command line height
-opt.cmdheight = 1
--- Mostly just for cmp
-opt.completeopt = { "menuone", "noselect" }
--- So that `` is visible in markdown files
-opt.conceallevel = 0
--- The encoding written to a file
-opt.fileencoding = "utf-8"
--- Highlight all matches on previous search pattern
-opt.hlsearch = true
--- Ignore case in search patterns
-opt.ignorecase = true
--- Allow the mouse to be used in neovim
-opt.mouse = "a"
--- Pop up menu height
-opt.pumheight = 10
--- Don't show things like -- INSERT -- anymore
-opt.showmode = false
--- Always show tabs
-opt.showtabline = 2
--- Smart case
-opt.smartcase = true
--- Force all horizontal splits to go below current window
-opt.splitbelow = true
--- Force all vertical splits to go to the right of current window
-opt.splitright = true
--- Creates a swapfile
-opt.swapfile = false
--- Time to wait for a mapped sequence to complete (in milliseconds)
-opt.timeoutlen = 1000
--- Enable persistent undo
-opt.undofile = true
--- Faster completion
-opt.updatetime = 300
--- Make indenting smarter
-opt.smartindent = true
--- If a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-opt.writebackup = false
--- Convert tabs to spaces
-opt.expandtab = false
--- Insert 2 spaces for a tab
-opt.tabstop = 2
--- The number of spaces inserted for each indentation
-opt.shiftwidth = 2
--- Highlight the current line
-opt.cursorline = true
--- Numbered lines
-opt.number = true
--- Relative numbered lines
-opt.relativenumber = false
--- Number column width
-opt.numberwidth = 2
--- Always show the sign column
-opt.signcolumn = "yes"
--- Display lines as one long line
-opt.wrap = false
--- Required for Treesitter folding
-opt.foldmethod = 'expr'
--- Don't auto fold
-opt.foldlevelstart = 99
--- Start scrolling N spaces early before hitting an editor wall.
-opt.scrolloff = 8
-opt.sidescrolloff = 12
+-- Load key-value options
+for k, v in pairs(options) do
+	vim.opt[k] = v
+end
 
--- Treesitter based folding
-vim.cmd [[set foldexpr=nvim_treesitter#foldexpr()]]
-
-opt.shortmess:append "c"
+vim.opt.shortmess:append "c"
 
 -- Stop fucking with my Python idents >:(
 vim.g.python_recommended_style = 0
