@@ -135,8 +135,8 @@ keymap("t", "<A-ESC>", "<C-\\><C-N>", term_opts)
 keymap("t", "<C-A-d>", "<C-\\><C-N>:bdelete!<CR>", term_opts)
 
 -- Resize in terminal mode
-keymap("t", "<C-A-k>", "<C-\\><C-N>:resize +2<CR>a", opts)
-keymap("t", "<C-A-j>", "<C-\\><C-N>:resize -2<CR>a", opts)
-keymap("t", "<C-A-h>", "<C-\\><C-N>:vertical resize -2<CR>a", opts)
-keymap("t", "<C-A-l>", "<C-\\><C-N>:vertical resize +2<CR>a", opts)
+keymap("t", "<A-K>", "<C-\\><C-N>:resize +2<CR>a", opts)
+keymap("t", "<A-J>", "<C-\\><C-N>:resize -2<CR>a", opts)
+keymap("t", "<A-H>", "<C-\\><C-N>:vertical resize -2<CR>a", opts)
+keymap("t", "<A-L>", "<C-\\><C-N>:vertical resize +2<CR>a", opts)
 
