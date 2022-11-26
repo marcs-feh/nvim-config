@@ -3,7 +3,9 @@ require('lualine').setup {
     icons_enabled = false,
     theme = 'codedark',
     component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    section_separators =   { left = '', right = ''},
+    --component_separators = { left = '|', right = '|'},
+    --section_separators = { left = '', right = ''},
     disabled_filetypes = {},
     always_divide_middle = true,
     globalstatus = false,
@@ -11,10 +13,10 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
+    lualine_c = {'filename', 'buffers'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
+    lualine_y = {},
+    lualine_z = {'progress', 'location'}
   },
   inactive_sections = {
     lualine_a = {},
@@ -22,9 +24,16 @@ require('lualine').setup {
     lualine_c = {'filename'},
     lualine_x = {'location'},
     lualine_y = {},
-    lualine_z = {}
+    lualine_z = {'progress', 'location'}
   },
-  tabline = {},
+  tabline = {
+    lualine_a = {'buffers'},
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {}
+	},
   extensions = {}
 }
 

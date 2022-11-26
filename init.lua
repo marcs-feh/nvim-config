@@ -9,7 +9,7 @@ LSP.setup_servers()
 
 --- Plugin configs
 require 'user.conf.cmp'
-require 'user.conf.lsp_installer'
+--require 'user.conf.lsp_installer'
 require 'user.conf.lualine'
 require 'user.conf.treesitter'
 require 'user.conf.vsnip'
