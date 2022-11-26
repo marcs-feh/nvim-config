@@ -95,6 +95,6 @@ require('vscode').setup({
 -- vim.cmd [[colorscheme base16-tomorrow-night]]
 
 -- Stop making lines comments when pressing o, this abomination is required
--- because vim's ftplugins are fucking retarded.
+-- because Vim's ftplugins are fucking retarded.
 vim.cmd [[autocmd FileType * set formatoptions-=o]]
 
