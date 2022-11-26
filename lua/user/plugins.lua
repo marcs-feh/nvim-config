@@ -37,6 +37,7 @@ return packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'   -- Useful lua functions used by lots of plugins
   use 'nvim-treesitter/nvim-treesitter' -- Treesitter for good syntax hightlighting
 	use 'echasnovski/mini.align'  -- Align text
+	use 'echasnovski/mini.surround' -- Surround actions
   -- Status line
   use {
     'nvim-lualine/lualine.nvim',
