@@ -104,6 +104,9 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "p", '"_dP', opts)
 
+-- Quick Align
+keymap("v", "<leader>a", ':lua QuickAlign(0, nil)<CR>', opts)
+
 -- Visual Block --
 -- Move text up and down
 keymap("x", "<C-j>", ":move '>+1<CR>gv-gv", opts)
@@ -113,7 +116,7 @@ keymap("x", "<C-k>", ":move '<-2<CR>gv-gv", opts)
 -- Open/Close Terminal
 local term_height = 8
 local term_width  = 36
-local term_prompt = '%~ > '
+local term_prompt ='%~ > '
 
 -- Bottom terminal
 keymap("n", "<leader>`",

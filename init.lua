@@ -16,3 +16,7 @@ require 'user.conf.vsnip'
 require 'user.conf.telescope'
 require 'user.conf.mini_align'
 require 'user.conf.mini_surround'
+
+--- Extra scripts
+require 'user.extra.quick-align'
+
