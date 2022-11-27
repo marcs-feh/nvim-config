@@ -67,6 +67,8 @@ return packer.startup(function(use)
 
 	-- CodeDark colorscheme
 	use 'Mofiqul/vscode.nvim'
+	-- Odin hightlighting
+	use 'Tetralux/odin.vim'
 
   -- Automatically set up your config after cloning packer.nvim
   -- Put this at the end after all plugins
