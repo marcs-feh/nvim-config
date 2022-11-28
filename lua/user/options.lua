@@ -79,8 +79,9 @@ end
 
 vim.opt.shortmess:append "c"
 
--- Stop fucking with my Python idents >:(
+-- 2 spaces for python indenting
 vim.g.python_recommended_style = 0
+vim.cmd [[autocmd FileType python set expandtab]]
 
 -- Colorsheme
 local c = require('vscode.colors')
@@ -94,7 +95,7 @@ require('vscode').setup({
 
 -- vim.cmd [[colorscheme base16-tomorrow-night]]
 
--- Stop making lines comments when pressing o, this abomination is required
+-- Stop making line comments when pressing o, this abomination is required
 -- because Vim's ftplugins are fucking retarded.
 vim.cmd [[autocmd FileType * set formatoptions-=o]]
 
