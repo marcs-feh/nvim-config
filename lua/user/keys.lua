@@ -116,7 +116,7 @@ keymap("x", "<C-k>", ":move '<-2<CR>gv-gv", opts)
 -- Open/Close Terminal
 local term_height = 8
 local term_width  = 36
-local term_prompt ='%~ > '
+local term_prompt = '%~ > '
 
 -- Bottom terminal
 keymap("n", "<leader>`",

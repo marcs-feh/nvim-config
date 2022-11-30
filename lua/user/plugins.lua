@@ -32,12 +32,18 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-	use 'wbthomason/packer.nvim'	-- Have packer manage itself
-	use 'nvim-lua/popup.nvim'		 -- An implementation of the Popup API from vim in Neovim
-	use 'nvim-lua/plenary.nvim'	 -- Useful lua functions used by lots of plugins
-	use 'nvim-treesitter/nvim-treesitter' -- Treesitter for good syntax hightlighting
-	use 'echasnovski/mini.align'	-- Align text
-	use 'echasnovski/mini.surround' -- Surround actions
+	-- Have packer manage itself
+	use 'wbthomason/packer.nvim'
+	-- An implementation of the Popup API from vim in Neovim
+	use 'nvim-lua/popup.nvim'
+	-- Useful lua functions used by lots of plugins
+	use 'nvim-lua/plenary.nvim'
+	-- AST query and good syntax hightlighting
+	use 'nvim-treesitter/nvim-treesitter'
+	-- Align text
+	use 'echasnovski/mini.align'
+	-- Surround actions
+	use 'echasnovski/mini.surround'
 	-- Status line
 	use {
 		'nvim-lualine/lualine.nvim',
@@ -64,6 +70,7 @@ return packer.startup(function(use)
 
 	-- CodeDark colorscheme
 	use 'Mofiqul/vscode.nvim'
+
 	-- Odin hightlighting
 	use 'Tetralux/odin.vim'
 
