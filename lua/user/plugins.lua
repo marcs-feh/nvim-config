@@ -40,10 +40,8 @@ return packer.startup(function(use)
 	use 'nvim-lua/plenary.nvim'
 	-- AST query and good syntax hightlighting
 	use 'nvim-treesitter/nvim-treesitter'
-	-- Align text
-	use 'echasnovski/mini.align'
-	-- Surround actions
-	use 'echasnovski/mini.surround'
+	-- Library with many small, super useful plugins
+	use 'echasnovski/mini.nvim'
 	-- Status line
 	use {
 		'nvim-lualine/lualine.nvim',

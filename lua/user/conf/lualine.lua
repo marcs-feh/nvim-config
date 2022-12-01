@@ -26,6 +26,7 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {'progress', 'location'}
   },
+	--[[
   tabline = {
     lualine_a = {'buffers'},
     lualine_b = {},
@@ -34,6 +35,7 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {}
 	},
+	]]--
   extensions = {}
 }
 

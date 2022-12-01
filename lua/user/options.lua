@@ -1,73 +1,73 @@
 local options = {
-	-- Creates a backup file,
+	-- Creates a backup file
 	backup = false,
-	-- Required to keep multiple buffers open,
+	-- Required to keep multiple buffers open
 	hidden = true,
-	-- Allows neovim to access the system clipboard,
+	-- Allows neovim to access the system clipboard
 	clipboard = "unnamedplus",
-	-- Command line height,
+	-- Command line height
 	cmdheight = 1,
-	-- Mostly just for cmp,
+	-- Mostly just for cmp
 	completeopt = { "menuone", "noselect" },
-	-- So that `` is visible in markdown files,
+	-- So that `` is visible in markdown files
 	conceallevel = 0,
-	-- The encoding written to a file,
+	-- The encoding written to a file
 	fileencoding = "utf-8",
-	-- Highlight all matches on previous search pattern,
+	-- Highlight all matches on previous search pattern
 	hlsearch = true,
-	-- Ignore case in search patterns,
+	-- Ignore case in search patterns
 	ignorecase = true,
-	-- Allow the mouse to be used in neovim,
+	-- Allow the mouse to be used in neovim
 	mouse = "a",
-	-- Pop up menu height,
+	-- Pop up menu height
 	pumheight = 10,
-	-- Don't show things like -- INSERT -- anymore,
+	-- Don't show things like -- INSERT -- anymore
 	showmode = false,
-	-- Always show tabs,
+	-- Always show tabs
 	showtabline = 2,
-	-- Smart case,
+	-- Smart case
 	smartcase = true,
-	-- Force all horizontal splits to go below current window,
+	-- Force all horizontal splits to go below current window
 	splitbelow = true,
-	-- Force all vertical splits to go to the right of current window,
+	-- Force all vertical splits to go to the right of current window
 	splitright = true,
-	-- Creates a swapfile,
+	-- Creates a swapfile
 	swapfile = false,
-	-- Time to wait for a mapped sequence to complete (in milliseconds),
+	-- Time to wait for a mapped sequence to complete (in milliseconds)
 	timeoutlen = 1000,
-	-- Enable persistent undo,
+	-- Enable persistent undo
 	undofile = true,
-	-- Faster completion,
+	-- Faster completion
 	updatetime = 300,
-	-- Make indenting smarter,
+	-- Make indenting smarter
 	smartindent = true,
-	-- If a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited,
+	-- If a file is being edited by another program (or was written to file while editing with another program) it is not allowed to be edited
 	writebackup = false,
-	-- Convert tabs to spaces,
+	-- Convert tabs to spaces
 	expandtab = false,
-	-- Insert 2 spaces for a tab,
+	-- Insert 2 spaces for a tab
 	tabstop = 2,
-	-- The number of spaces inserted for each indentation,
+	-- The number of spaces inserted for each indentation
 	shiftwidth = 2,
-	-- Highlight the current line,
+	-- Highlight the current line
 	cursorline = true,
-	-- Numbered lines,
+	-- Numbered lines
 	number = true,
-	-- Relative numbered lines,
+	-- Relative numbered lines
 	relativenumber = false,
-	-- Number column width,
+	-- Number column width
 	numberwidth = 2,
-	-- Always show the sign column,
+	-- Always show the sign column
 	signcolumn = "yes",
-	-- Display lines as one long line,
+	-- Display lines as one long line
 	wrap = false,
-	-- Required for Treesitter folding,
+	-- Required for Treesitter folding
 	foldmethod = 'expr',
 	-- Treesitter based folding
 	foldexpr = 'nvim_treesitter#foldexpr()',
-	-- Don't auto fold,
+	-- Don't auto fold
 	foldlevelstart = 99,
-	-- Start scrolling N spaces early before hitting an editor wall.,
+	-- Start scrolling N spaces early before hitting an editor wall.
 	scrolloff = 8,
 	sidescrolloff = 12,
 }
@@ -95,7 +95,7 @@ require('vscode').setup({
 
 -- vim.cmd [[colorscheme base16-tomorrow-night]]
 
--- Stop making line comments when pressing o, this abomination is required
+-- Stop making line comments when pressing o this abomination is required
 -- because Vim's ftplugins are fucking retarded.
 vim.cmd [[autocmd FileType * set formatoptions-=o]]
 
