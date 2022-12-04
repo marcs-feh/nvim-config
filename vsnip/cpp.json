@@ -5,7 +5,7 @@
       "#ifndef INCLUDE_$1",
       "#define INCLUDE_$1",
       "\n$0\n",
-      "#endif"
+      "#endif // header guard"
     ],
     "description":"C/C++ header guard"
   },

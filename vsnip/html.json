@@ -1,0 +1,18 @@
+{
+  "Boilerplate":{
+    "prefix":["boilerplate"],
+    "body":[
+			"<!DOCTYPE html>",
+			"<html lang=\"en\">",
+			"<head>",
+			"\t<title>Hello, world!</title>",
+			"\t<meta charset=\"UTF-8\" />",
+			"</head>",
+			"<body>",
+			"\t<h1>Hello, world!</h1>",
+			"</body>",
+			"</html>"
+    ],
+    "description":"HTML5 Boilerplate"
+  }
+}

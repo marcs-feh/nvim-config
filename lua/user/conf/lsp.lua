@@ -8,7 +8,7 @@ M.available_servers = {
 	['gopls']       = true, -- Go
 	['bashls']      = true, -- Bash, sh
 	['pyright']     = true, -- Python
-	['emmet_ls']    = false, -- HTML/CSS
+	['emmet_ls']    = true, -- HTML/CSS
 	-- Use :help lspconfig-all to learn more about other servers
 }
 

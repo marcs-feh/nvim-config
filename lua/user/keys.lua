@@ -40,8 +40,9 @@ keymap("n", "<C-a>", ":normal ggVG<CR>", opts)
 -- Open config for editing
 keymap("n", "<C-A-c>", ":e ~/.config/nvim/<CR>", opts)
 
--- Show current buffers
-keymap("n", "<leader>b", ":buffers<CR>", opts)
+-- Better page up/down
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "<C-d>", "<C-d>zz", opts)
 
 -- Split windows
 keymap("n", "<leader>s", ":split<CR>", opts)
@@ -88,13 +89,11 @@ keymap("n", "K",  ":lua vim.lsp.buf.hover()<CR>", opts)
 keymap("n", "<C-A-k>",    ":lua vim.lsp.buf.signature_help()<CR>", opts)
 keymap("n", "<leader>af", ":lua vim.lsp.buf.code_action()<CR>", opts)
 keymap("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", opts)
--- List clients
-keymap("n", "<leader>Q", ":lua Lsp_utils.list_clients()<CR>", opts)
+
 -- Stop LSP
 keymap("n", "<leader>S", ":LspStop<CR>", opts)
 
 -- Insert --
--- nothing :P
 
 -- Visual --
 -- Stay in indent mode
