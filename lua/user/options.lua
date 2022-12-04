@@ -83,7 +83,7 @@ vim.opt.shortmess:append "c"
 vim.g.python_recommended_style = 0
 vim.cmd [[autocmd FileType python set expandtab]]
 
--- Colorsheme
+-- Colorsheme (fancy)
 local c = require('vscode.colors')
 require('vscode').setup({
 	transparent = true,
@@ -93,8 +93,12 @@ require('vscode').setup({
 	},
 })
 
--- vim.cmd [[colorscheme base16-tomorrow-night]]
+-- Colorsheme (simple)
+-- Use Base16List() to list themes
+require 'user.extra.base-16'
+Base16Colors('monokai')
 
+-- Colorsheme (simple)
 -- Stop making line comments when pressing o this abomination is required
 -- because Vim's ftplugins are fucking retarded.
 vim.cmd [[autocmd FileType * set formatoptions-=o]]
