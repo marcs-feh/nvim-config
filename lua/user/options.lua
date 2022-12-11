@@ -90,12 +90,11 @@ vim.cmd [[autocmd FileType rust set noexpandtab shiftwidth=2 tabstop=2]]
 vim.cmd [[autocmd FileType sml inoremap ?? (* *)<ESC>hhi ]]
 
 -- Colorsheme (fancy)
-local c = require('vscode.colors')
 require('vscode').setup({
 	transparent = true,
 	group_overrides = {
-		['@type'] = {fg=c.vscBlue},
-		['CursorLine'] = {bg=nil}
+		['@type'] = {fg='#569cd6'},
+		['CursorLine'] = {bg=nil},
 	},
 })
 
