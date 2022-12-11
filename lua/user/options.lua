@@ -95,8 +95,8 @@ require('vscode').setup({
 
 -- Colorsheme (simple)
 -- Use Base16List() to list themes
-require 'user.extra.base-16'
-Base16Colors('monokai')
+--require 'user.extra.base-16'
+--Base16Colors('monokai')
 
 -- Colorsheme (simple)
 -- Stop making line comments when pressing o this abomination is required
