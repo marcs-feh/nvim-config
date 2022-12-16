@@ -19,5 +19,6 @@ require 'user.conf.mini_surround'
 
 --- Extra scripts
 require 'user.extra.quick-align'
+require 'user.extra.lsp-utils'
 require 'user.extra.print-table'
 require 'user.extra.header-guard'
