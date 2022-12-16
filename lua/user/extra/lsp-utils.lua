@@ -5,9 +5,33 @@ function ListLspClients()
 	end
 end
 
-function ShowLspDiagnostics()
-	local diagnostics = vim.diagnostic.get(0)
-	for _, diag in ipairs(diagnostics) do
-		print('['..diag.lnum.. '] ' .. diag.message)
+local function fmtSeverity(severity)
+	if     severity == 1 then
+		return 'E'
+	elseif severity == 2 then
+		return 'W'
+	elseif severity == 3 then
+		return 'I'
+	elseif severity == 4 then
+		return '?'
 	end
 end
+
+function ShowBufferLspDiagnostics(bufnum)
+	local diagnostics = vim.diagnostic.get(bufnum)
+	local bufname = vim.api.nvim_buf_get_name(bufnum)
+	local msg = bufname .. ':\n'
+	for _, diag in ipairs(diagnostics) do
+		msg = msg .. ('%s %4d: %s\n'):format(fmtSeverity(diag.severity), diag.lnum, diag.message)
+	end
+	print(msg)
+end
+
+function ShowLspDiagnostics()
+	for _, buf in pairs(vim.fn.getbufinfo()) do
+		if buf.listed == 1 then
+			ShowBufferLspDiagnostics(buf.bufnr)
+		end
+	end
+end
+
