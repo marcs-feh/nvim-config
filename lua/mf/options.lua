@@ -1,3 +1,5 @@
+--- General Editor options ---
+
 local options = {
 	-- Creates a backup file
 	backup = false,
@@ -78,30 +80,6 @@ for k, v in pairs(options) do
 end
 
 vim.opt.shortmess:append "c"
-
--- 2 spaces for python indenting
-vim.g.python_recommended_style = 0
-vim.cmd [[autocmd FileType python set expandtab]]
-
--- Rust indentation style is objectively inferior, tabs are better.
-vim.cmd [[autocmd FileType rust set noexpandtab shiftwidth=2 tabstop=2]]
-
--- Standard ML helper for writing comments with '??'
-vim.cmd [[autocmd FileType sml inoremap ?? (* *)<ESC>hhi ]]
-
--- Colorsheme (fancy)
-require('vscode').setup({
-	transparent = true,
-	group_overrides = {
-		['@type'] = {fg='#569cd6'},
-		['CursorLine'] = {bg=nil},
-	},
-})
-
--- Colorsheme (simple)
--- Use Base16List() to list themes
---require 'user.extra.base-16'
---Base16Colors('monokai')
 
 -- Stop making line comments when pressing o this abomination is required
 -- because Vim's ftplugins are fucking retarded.

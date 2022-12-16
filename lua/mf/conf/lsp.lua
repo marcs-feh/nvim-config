@@ -1,3 +1,5 @@
+--- LSP configuration ---
+
 local M = {}
 local LSP = require 'lspconfig'
 

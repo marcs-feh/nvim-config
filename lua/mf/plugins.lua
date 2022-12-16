@@ -1,3 +1,5 @@
+--- Packer plugin configuration ---
+
 local fn = vim.fn
 
 -- Automatically install packer
