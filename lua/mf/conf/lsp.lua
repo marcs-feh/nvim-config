@@ -11,7 +11,7 @@ M.available_servers = {
 	['bashls']      = true, -- Bash, sh
 	['pyright']     = true, -- Python
 	['emmet_ls']    = true, -- HTML/CSS
-	['odin']        = false, -- Odin
+	['odin']        = true, -- Odin
 	-- Use :help lspconfig-all to learn more about other servers
 }
 
@@ -38,7 +38,7 @@ M.server_configs = {
 	},
 }
 
--- Setup servers done in cmp.lua
+-- Setup servers
 function M.setup_servers()
 	for server, enabled in pairs(M.available_servers) do
 		if enabled then
