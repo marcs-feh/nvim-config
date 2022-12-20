@@ -1,9 +1,16 @@
-local t = require 'mf.extra.mini_lualine_base-16'
+local llt = require 'mf.extra.mini_lualine_base-16'.lualineTheme
+local theme = nil
+
+if type(Base16CurTheme) == 'string' then
+	theme = llt(Base16CurTheme)
+else
+	theme = 'codedark'
+end
 
 require 'lualine'.setup {
 	options = {
 		icons_enabled = false,
-		theme = t.lualineTheme(Base16CurTheme),
+		theme = theme,
 		component_separators = { left = '', right = ''},
 		section_separators =	 { left = '', right = ''},
 		--component_separators = { left = '|', right = '|'},

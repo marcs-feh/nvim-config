@@ -1,7 +1,6 @@
 --- Colorscheme Configuration ---
 
 -- Colorsheme (fancy)
---[[
 require('vscode').setup({
 	transparent = true,
 	group_overrides = {
@@ -9,13 +8,14 @@ require('vscode').setup({
 		['CursorLine'] = {bg=nil},
 	},
 })
-]]
 
 -- Colorsheme (simple)
--- Use Base16List() to list themes
+-- Use ListBase16Themes() to list themes
+--[[
 local themes = require 'mf.extra.base-16'
-Base16CurTheme = 'catpuccin'
+Base16CurTheme = 'chalk'
 require 'mini.base16'.setup{
 	palette = themes[Base16CurTheme]
 }
+]]
 
