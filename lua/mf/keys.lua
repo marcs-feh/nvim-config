@@ -37,9 +37,6 @@ keymap("n", "<leader>W", ":%s/\\s\\+$//<CR>:noh<CR>", opts)
 -- Select all
 keymap("n", "<C-a>", ":normal ggVG<CR>", opts)
 
--- Open config for editing
-keymap("n", "<C-A-c>", ":e ~/.config/nvim/<CR>", opts)
-
 -- Better page up/down
 keymap("n", "<C-u>", "<C-u>zz", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)
@@ -49,7 +46,7 @@ keymap("n", "<leader>s", ":split<CR>", opts)
 keymap("n", "<leader>v", ":vsplit<CR>", opts)
 
 -- Expand window
-keymap("n", "<C-A-f>", ":resize<CR>:vertical resize<CR>", opts)
+keymap("n", "<leader>F", ":resize<CR>:vertical resize<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<A-h>", "<C-w>h", opts)
@@ -113,17 +110,17 @@ keymap("x", "<C-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Open/Close Terminal
-local term_height = 8
+local term_height = 6
 local term_width  = 36
-local term_prompt = '%~ > '
+local term_prompt = '[%~]\n$ '
 
 -- Bottom terminal
-keymap("n", "<leader>`",
+keymap("n", "<leader>ts",
 	  ":split<CR>:resize "..term_height.."<CR>"
 	..":set nonumber<CR>:set signcolumn=no<CR>"
 	..":terminal<CR>aPS1=\"".. term_prompt .."\"<CR>clear<CR>", opts)
 -- Side terminal
-keymap("n", "<leader>t",
+keymap("n", "<leader>tv",
 	  ":vsplit<CR>:vertical resize " .. term_width .."<CR>"
 	..":set nonumber<CR>:set signcolumn=no<CR>"
 	..":terminal<CR>aPS1=\"".. term_prompt .."\"<CR>clear<CR>", opts)

@@ -1,7 +1,7 @@
 --- Core configs
+require 'mf.plugins'
 require 'mf.options'
 require 'mf.keys'
-require 'mf.plugins'
 require 'mf.colors'
 
 --- LSP configs
