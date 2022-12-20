@@ -11,7 +11,7 @@ M.available_servers = {
 	['bashls']      = true, -- Bash, sh
 	['pyright']     = true, -- Python
 	['emmet_ls']    = true, -- HTML/CSS
-	['odin']        = true, -- Odin
+	['odin']        = false, -- Odin
 	-- Use :help lspconfig-all to learn more about other servers
 }
 

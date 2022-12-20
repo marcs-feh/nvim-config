@@ -47,6 +47,8 @@ local options = {
 	writebackup = false,
 	-- Convert tabs to spaces
 	expandtab = false,
+	-- Required for colorschemes to work
+	termguicolors = true,
 	-- Insert 2 spaces for a tab
 	tabstop = 2,
 	-- The number of spaces inserted for each indentation

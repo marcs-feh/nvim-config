@@ -1,6 +1,7 @@
---- Colorsheme Customization ---
+--- Colorscheme Configuration ---
 
 -- Colorsheme (fancy)
+--[[
 require('vscode').setup({
 	transparent = true,
 	group_overrides = {
@@ -8,8 +9,13 @@ require('vscode').setup({
 		['CursorLine'] = {bg=nil},
 	},
 })
+]]
 
 -- Colorsheme (simple)
 -- Use Base16List() to list themes
---require 'mf.extra.base-16'
---Base16Colors('monokai')
+local col = require 'mf.extra.base-16'
+
+require 'mini.base16'.setup{
+	palette = col.themes['monokai']
+}
+

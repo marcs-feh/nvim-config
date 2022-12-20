@@ -1,4 +1,6 @@
-local C = {
+local M = {}
+
+M.themes = {
 	['gruvbox-light'] = {
 		base00 = '#fbf1c7', base01 = '#ebdbb2', base02 = '#d5c4a1', base03 = '#bdae93', base04 = '#665c54', base05 = '#504945',
 		base06 = '#3c3836', base07 = '#282828', base08 = '#9d0006', base09 = '#af3a03', base0A = '#b57614', base0B = '#79740e',
@@ -76,21 +78,12 @@ local C = {
 	},
 }
 
-function Base16List()
-	local all_themes = C
+function ListBase16Themes()
+	local all_themes = M.themes
 	print('Available themes:')
 	for theme, _ in pairs(all_themes) do
 		print("* '"..theme.."'");
 	end
 end
 
-function Base16Colors(name)
-	local theme = C[name]
-	if not theme then
-		print('No such theme: "'.. name ..'"')
-	else
-		require 'mini.base16'.setup({palette = theme})
-	end
-end
-
-return C
+return M
