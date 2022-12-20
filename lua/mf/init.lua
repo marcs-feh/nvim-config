@@ -16,6 +16,7 @@ require 'mf.conf.vsnip'
 require 'mf.conf.telescope'
 require 'mf.conf.mini_align'
 require 'mf.conf.mini_surround'
+require 'mf.conf.mini_pairs'
 --require 'mf.conf.lsp_installer'
 
 --- Extra scripts
