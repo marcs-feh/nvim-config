@@ -1,7 +1,9 @@
-require('lualine').setup {
+local t = require 'mf.extra.mini_lualine_base-16'
+
+require 'lualine'.setup {
 	options = {
 		icons_enabled = false,
-		theme = 'auto',
+		theme = t.lualineTheme(Base16CurTheme),
 		component_separators = { left = '', right = ''},
 		section_separators =	 { left = '', right = ''},
 		--component_separators = { left = '|', right = '|'},
