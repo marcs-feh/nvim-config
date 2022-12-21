@@ -6,7 +6,7 @@ you can also include it in your existing config.
 ## Structure
 
 | Folder | Purpose                                   |
-|--------+-------------------------------------------|
+|--------|-------------------------------------------|
 |`core`  | General configuration                     |
 |`plug`  | Plugin specific configuration and loading |
 |`extra` | Extra utility scripts and integration     |
