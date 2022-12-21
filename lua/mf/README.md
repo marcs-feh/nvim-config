@@ -5,9 +5,14 @@ you can also include it in your existing config.
 
 ## Structure
 
-Main files that are relevant to the editor as a whole are in `mf`, everything
-is initialized by `init.lua`. Files in `conf` are for plugin configuration and
-loading, files in `extra` are extra scripts to enhance the overall experience.
+| Folder | Purpose                                   |
+|--------+-------------------------------------------|
+|`core`  | General configuration                     |
+|`plug`  | Plugin specific configuration and loading |
+|`extra` | Extra utility scripts and integration     |
+
+3 directories
+
 
 ## Main features
 

@@ -1,22 +1,23 @@
 --- Core configs
-require 'mf.plugins'
-require 'mf.options'
-require 'mf.colors'
-require 'mf.keys'
+require 'mf.core.plugins'
+require 'mf.core.options'
+require 'mf.core.colors'
+require 'mf.core.languages'
+require 'mf.core.keys'
 
 --- LSP configs
-local LSP = require 'mf.conf.lsp'
+local LSP = require 'mf.plug.lsp'
 LSP.setup_servers()
 
---- Plugin configs
-require 'mf.conf.cmp'
-require 'mf.conf.lualine'
-require 'mf.conf.treesitter'
-require 'mf.conf.vsnip'
-require 'mf.conf.telescope'
-require 'mf.conf.mini_align'
-require 'mf.conf.mini_surround'
-require 'mf.conf.mini_pairs'
+--- plug configs
+require 'mf.plug.cmp'
+require 'mf.plug.lualine'
+require 'mf.plug.treesitter'
+require 'mf.plug.vsnip'
+require 'mf.plug.telescope'
+require 'mf.plug.mini_align'
+require 'mf.plug.mini_surround'
+require 'mf.plug.mini_pairs'
 --require 'mf.conf.lsp_installer'
 
 --- Extra scripts
