@@ -11,9 +11,6 @@ you can also include it in your existing config.
 |`plug`  | Plugin specific configuration and loading |
 |`extra` | Extra utility scripts and integration     |
 
-3 directories
-
-
 ## Main features
 
 These things are already pre-configured:
