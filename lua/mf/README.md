@@ -26,5 +26,5 @@ These things are already pre-configured:
 * Telescope
 * `mini.nvim` for general QoL improvements
 * Base16 wrapper for `lualine` so it works nicely with `mini.base16`
-* + Extra scripts and tweaks
+* Extra scripts and tweaks
 
