@@ -6,6 +6,7 @@
       "*.o",
       "*.a",
       "*.so",
+			"*.bin",
 			".ninja_log"
     ],
     "description":"c/c++ gitignore"

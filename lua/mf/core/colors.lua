@@ -13,7 +13,7 @@ require('vscode').setup({
 -- Use ListBase16Themes() to list themes
 --[[
 local themes = require 'mf.extra.base-16'
-Base16CurTheme = 'chalk'
+Base16CurTheme = 'mf'
 require 'mini.base16'.setup{
 	palette = themes[Base16CurTheme]
 }

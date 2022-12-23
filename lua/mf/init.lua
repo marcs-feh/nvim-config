@@ -1,9 +1,9 @@
 --- Core configs
 require 'mf.core.plugins'
 require 'mf.core.options'
-require 'mf.core.colors'
 require 'mf.core.languages'
 require 'mf.core.keys'
+require 'mf.core.colors'
 
 --- LSP configs
 local LSP = require 'mf.plug.lsp'
@@ -24,4 +24,3 @@ require 'mf.plug.mini_pairs'
 require 'mf.extra.quick-align'
 require 'mf.extra.lsp-utils'
 require 'mf.extra.header-guard'
-
