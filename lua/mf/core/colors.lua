@@ -18,4 +18,3 @@ require 'mini.base16'.setup{
 	palette = themes[Base16CurTheme]
 }
 ]]
-
