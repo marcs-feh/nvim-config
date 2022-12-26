@@ -74,6 +74,9 @@ return packer.startup(function(use)
 	-- Odin hightlighting
 	use 'marcs-feh/odin.vim'
 
+	-- Nim hightlighting
+	use 'zah/nim.vim'
+
 	-- Automatically set up your config after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
