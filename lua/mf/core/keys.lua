@@ -10,8 +10,10 @@ local keymap = function (mode, seq, cmd, options)
  vim.api.nvim_set_keymap(mode, seq, cmd, options)
 end
 
---Remap space as leader key
+-- Remap space as leader key
 keymap("", "<Space>", "<Nop>")
+-- Q is basically useless
+keymap("", "Q", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -47,8 +49,8 @@ keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "<C-d>", "<C-d>zz")
 
 -- Split windows
-keymap("n", "<leader>s", ":split<CR>")
-keymap("n", "<leader>v", ":vsplit<CR>")
+keymap("n", "<leader>sh", ":split<CR>")
+keymap("n", "<leader>sv", ":vsplit<CR>")
 
 -- Expand window
 keymap("n", "<leader>F", ":resize<CR>:vertical resize<CR>")
@@ -74,10 +76,6 @@ keymap("n", "<leader>J", "<C-w>J")
 keymap("n", "<leader>K", "<C-w>K")
 keymap("n", "<leader>L", "<C-w>L")
 
--- Move text up and down
-keymap("n", "<C-j>", ":m .+1<CR>==")
-keymap("n", "<C-k>", ":m .-2<CR>==")
-
 -- Navigate buffers
 keymap("n", "L", ":bnext<CR>")
 keymap("n", "H", ":bprevious<CR>")
@@ -87,16 +85,12 @@ keymap("n", "<leader>n", ":enew<CR>")
 
 -- LSP shortcuts
 keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>")
-keymap("n", "gD", ":lua vim.lsp.buf.declaration()<CR>")
-keymap("n", "gi", ":lua vim.lsp.buf.implementation()<CR>")
 keymap("n", "gw", ":lua vim.lsp.buf.document_symbol()<CR>")
-keymap("n", "gw", ":lua vim.lsp.buf.workspace_symbol()<CR>")
-keymap("n", "gr", ":lua vim.lsp.buf.references()<CR>")
-keymap("n", "gt", ":lua vim.lsp.buf.type_definition()<CR>")
-keymap("n", "K",  ":lua vim.lsp.buf.hover()<CR>")
-keymap("n", "<C-A-k>",    ":lua vim.lsp.buf.signature_help()<CR>")
-keymap("n", "<leader>af", ":lua vim.lsp.buf.code_action()<CR>")
-keymap("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>")
+keymap("n", "<C-h>", ":lua vim.lsp.buf.signature_help()<CR>")
+keymap("n", "<leader>vd", ":lua vim.diagnostic.open_float()<CR>")
+keymap("n", "<leader>vws", ":lua vim.lsp.buf.workspace_symbol()<CR>")
+keymap("n", "<leader>vrr", ":lua vim.lsp.buf.references()<CR>")
+keymap("n", "<leader>vrn", ":lua vim.lsp.buf.rename()<CR>")
 
 -- Stop LSP
 keymap("n", "<leader>S", ":LspStop<CR>")
@@ -111,9 +105,6 @@ keymap("n", "<leader>da", ":lua ShowLspDiagnostics()<CR>")
 -- Stay in indent mode
 keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
-
--- Move text up and down
-keymap("v", "p", '"_dP')
 
 -- Quick Align
 keymap("v", "<leader>a", ':lua QuickAlign(0, nil)<CR>')
@@ -133,12 +124,12 @@ local term_prompt = '[%~]\n$ '
 keymap("n", "<leader>ts",
 	  ":split<CR>:resize "..term_height.."<CR>"
 	..":set nonumber<CR>:set signcolumn=no<CR>"
-	..":terminal<CR>aPS1=\"".. term_prompt .."\"<CR>clear<CR>")
+	..":terminal<CR>aPS1=__ESC".. term_prompt .."__ESC<CR>clear<CR>")
 -- Side terminal
 keymap("n", "<leader>tv",
 	  ":vsplit<CR>:vertical resize " .. term_width .."<CR>"
 	..":set nonumber<CR>:set signcolumn=no<CR>"
-	..":terminal<CR>aPS1=\"".. term_prompt .."\"<CR>clear<CR>")
+	..":terminal<CR>aPS1=__ESC".. term_prompt .."__ESC<CR>clear<CR>")
 
 -- Better terminal navigation
 keymap("t", "<A-h>", "<C-\\><C-N><C-w>h", term_opts)

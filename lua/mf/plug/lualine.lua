@@ -1,7 +1,7 @@
 local llt = require 'mf.extra.mini_lualine_base-16'.lualineTheme
 local theme = nil
 
-if type(Base16CurTheme) == 'string' then
+if Base16CurTheme ~= nil then
 	theme = llt(Base16CurTheme)
 else
 	theme = 'codedark'

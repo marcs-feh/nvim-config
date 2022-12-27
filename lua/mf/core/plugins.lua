@@ -61,7 +61,6 @@ return packer.startup(function(use)
 
 	-- LSP Support
 	use 'neovim/nvim-lspconfig'
-	use 'williamboman/nvim-lsp-installer'
 
 	-- Telescope
 	use {'nvim-telescope/telescope.nvim', tag = '0.1.0',

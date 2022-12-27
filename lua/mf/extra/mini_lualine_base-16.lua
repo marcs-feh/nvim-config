@@ -12,10 +12,10 @@ function M.lualineTheme(name)
 		dark_fg  = theme.base03,
 		fg       = theme.base04,
 		light_fg = theme.base05,
-		normal   = theme.base0E,
-		insert   = theme.base0D,
-		visual   = theme.base0A,
-		replace  = theme.base09,
+		normal   = theme.base0A,
+		insert   = theme.base0B,
+		visual   = theme.base09,
+		replace  = theme.base08,
 	}
 
 	return {
