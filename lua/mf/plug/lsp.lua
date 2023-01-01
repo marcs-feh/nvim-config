@@ -4,14 +4,14 @@ local M = {}
 local LSP = require 'lspconfig'
 
 M.available_servers = {
-	-- server name    enabled?
+	-- server name		enabled?
 	['sumneko_lua'] = true, -- Lua
-	['clangd']      = true, -- C/C++
-	['gopls']       = true, -- Go
-	['bashls']      = true, -- Bash, sh
-	['pyright']     = true, -- Python
-	['emmet_ls']    = true, -- HTML/CSS
-	['odin']        = true, -- Odin
+	['clangd']			= true, -- C/C++
+	['gopls']			 = true, -- Go
+	['bashls']			= true, -- Bash, sh
+	['pyright']		 = true, -- Python
+	['emmet_ls']		= true, -- HTML/CSS
+	['odin']				= true, -- Odin
 	-- Use :help lspconfig-all to learn more about other servers
 }
 
@@ -52,3 +52,4 @@ end
 
 -- Return server list for other modules to use
 return M
+

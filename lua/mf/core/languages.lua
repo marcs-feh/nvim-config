@@ -4,7 +4,7 @@
 vim.g.python_recommended_style = 0
 
 -- Use spaces instead of tab for certain languages
-vim.cmd [[autocmd FileType markdown,org,python,nim setlocal expandtab]]
+vim.cmd [[autocmd FileType markdown,scheme,org,python,nim setlocal expandtab]]
 
 -- Rust indentation style is objectively inferior, tabs are better.
 vim.cmd [[autocmd FileType rust set noexpandtab shiftwidth=2 tabstop=2]]

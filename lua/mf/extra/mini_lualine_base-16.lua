@@ -7,33 +7,33 @@ function M.lualineTheme(name)
 	end
 
 	local colors = {
-		bg       = theme.base01,
-		alt_bg   = theme.base02,
-		dark_fg  = theme.base03,
-		fg       = theme.base04,
+		bg			 = theme.base01,
+		alt_bg	 = theme.base02,
+		dark_fg	= theme.base03,
+		fg			 = theme.base04,
 		light_fg = theme.base05,
-		normal   = theme.base0A,
-		insert   = theme.base0B,
-		visual   = theme.base09,
-		replace  = theme.base08,
+		normal	 = theme.base0A,
+		insert	 = theme.base0B,
+		visual	 = theme.base09,
+		replace	= theme.base08,
 	}
 
 	return {
 		normal = {
-			a = { fg = colors.bg,       bg = colors.normal },
+			a = { fg = colors.bg,			 bg = colors.normal },
 			b = { fg = colors.light_fg, bg = colors.alt_bg },
-			c = { fg = colors.fg,       bg = colors.bg },
+			c = { fg = colors.fg,			 bg = colors.bg },
 		},
 		replace = {
-			a = { fg = colors.bg,       bg = colors.replace },
+			a = { fg = colors.bg,			 bg = colors.replace },
 			b = { fg = colors.light_fg, bg = colors.alt_bg },
 		},
 		insert = {
-			a = { fg = colors.bg,       bg = colors.insert },
+			a = { fg = colors.bg,			 bg = colors.insert },
 			b = { fg = colors.light_fg, bg = colors.alt_bg },
 		},
 		visual = {
-			a = { fg = colors.bg,       bg = colors.visual },
+			a = { fg = colors.bg,			 bg = colors.visual },
 			b = { fg = colors.light_fg, bg = colors.alt_bg },
 		},
 		inactive = {

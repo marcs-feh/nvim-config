@@ -18,12 +18,12 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Modes
---   normal   = "n",
---   insert   = "i",
---   visual   = "v",
---   block    = "x",
---   terminal = "t",
---   command  = "c",
+--	 normal	 = "n",
+--	 insert	 = "i",
+--	 visual	 = "v",
+--	 block		= "x",
+--	 terminal = "t",
+--	 command	= "c",
 
 -- Normal --
 -- Save
@@ -117,17 +117,17 @@ keymap("x", "<C-k>", ":move '<-2<CR>gv-gv")
 -- Terminal --
 -- Open/Close Terminal
 local term_height = 6
-local term_width  = 36
+local term_width	= 36
 local term_prompt = '[%~]\n$ '
 
 -- Bottom terminal
 keymap("n", "<leader>ts",
-	  ":split<CR>:resize "..term_height.."<CR>"
+		":split<CR>:resize "..term_height.."<CR>"
 	..":set nonumber<CR>:set signcolumn=no<CR>"
 	..":terminal<CR>aPS1=__ESC".. term_prompt .."__ESC<CR>clear<CR>")
 -- Side terminal
 keymap("n", "<leader>tv",
-	  ":vsplit<CR>:vertical resize " .. term_width .."<CR>"
+		":vsplit<CR>:vertical resize " .. term_width .."<CR>"
 	..":set nonumber<CR>:set signcolumn=no<CR>"
 	..":terminal<CR>aPS1=__ESC".. term_prompt .."__ESC<CR>clear<CR>")
 

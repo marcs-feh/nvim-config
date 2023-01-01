@@ -6,7 +6,7 @@ function ListLspClients()
 end
 
 local function fmtSeverity(severity)
-	if     severity == 1 then
+	if		 severity == 1 then
 		return 'E'
 	elseif severity == 2 then
 		return 'W'

@@ -55,25 +55,20 @@ return packer.startup(function(use)
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
-
 	-- Snippets
 	use 'hrsh7th/vim-vsnip'
-
-	-- LSP Support
+	-- LSP server configs
 	use 'neovim/nvim-lspconfig'
-
+	-- Manage and install LSP, linters, etc.
+	use 'williamboman/mason.nvim'
 	-- Telescope
 	use {'nvim-telescope/telescope.nvim', tag = '0.1.0',
 			 requires = { {'nvim-lua/plenary.nvim'} }
 	}
-
 	-- CodeDark colorscheme
 	use 'Mofiqul/vscode.nvim'
-
-	-- Odin hightlighting
+	-- Non treesitter hightlighting
 	use 'marcs-feh/odin.vim'
-
-	-- Nim hightlighting
 	use 'zah/nim.vim'
 
 	-- Automatically set up your config after cloning packer.nvim
