@@ -63,12 +63,11 @@ return packer.startup(function(use)
 	use 'williamboman/mason.nvim'
 	-- Telescope
 	use {'nvim-telescope/telescope.nvim', tag = '0.1.0',
-			 requires = { {'nvim-lua/plenary.nvim'} }
+		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	-- CodeDark colorscheme
 	use 'Mofiqul/vscode.nvim'
 	-- Non treesitter hightlighting
-	use 'marcs-feh/odin.vim'
 	use 'zah/nim.vim'
 
 	-- Automatically set up your config after cloning packer.nvim

@@ -12,3 +12,5 @@ vim.cmd [[autocmd FileType rust set noexpandtab shiftwidth=2 tabstop=2]]
 -- Standard ML helper for writing comments with '??'
 vim.cmd [[autocmd FileType sml inoremap ?? (* *)<ESC>hhi ]]
 
+vim.cmd [[autocmd BufNewFile,Bufread *.odin set filetype=odin]]
+

@@ -91,6 +91,7 @@ keymap("n", "<leader>vd", ":lua vim.diagnostic.open_float()<CR>")
 keymap("n", "<leader>vws", ":lua vim.lsp.buf.workspace_symbol()<CR>")
 keymap("n", "<leader>vrr", ":lua vim.lsp.buf.references()<CR>")
 keymap("n", "<leader>vrn", ":lua vim.lsp.buf.rename()<CR>")
+keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>")
 
 -- Stop LSP
 keymap("n", "<leader>S", ":LspStop<CR>")
