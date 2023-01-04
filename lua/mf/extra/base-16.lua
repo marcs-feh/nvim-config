@@ -68,3 +68,23 @@ function ListBase16Themes()
 end
 
 return C
+
+--[[
+base00 -> bg
+base01 -> bg alt
+base02 -> bg sel
+base03 -> comments
+base04 -> fg dar
+base05 -> fg
+base06 -> fg li
+base07 -> bg li
+base08 -> vars
+base09 -> numbers
+base0A -> types
+base0B -> strings
+base0C -> support
+base0D -> functions
+base0E -> keywords
+base0F -> regex, separators
+--]]
+

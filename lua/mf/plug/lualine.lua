@@ -12,7 +12,7 @@ require 'lualine'.setup {
 		icons_enabled = false,
 		theme = theme,
 		component_separators = { left = '', right = ''},
-		section_separators =	 { left = '', right = ''},
+		section_separators =  { left = '', right = ''},
 		--component_separators = { left = '|', right = '|'},
 		--section_separators = { left = '', right = ''},
 		disabled_filetypes = {},
@@ -21,8 +21,8 @@ require 'lualine'.setup {
 	},
 	refresh = {
 		statusline = 1000,
-		winbar		 = 1000,
-		tabline		= 1000,
+		winbar     = 1000,
+		tabline	   = 1000,
 	},
 	sections = {
 		lualine_a = {'mode', },

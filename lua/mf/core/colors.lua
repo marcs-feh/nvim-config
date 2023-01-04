@@ -1,7 +1,7 @@
 --- Colorscheme Configuration ---
 
 -- Colorsheme (fancy)
--- Comment this out if using base16
+-- Comment this function if using base16
 require('vscode').setup({
 	transparent = true,
 	group_overrides = {

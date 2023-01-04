@@ -5,13 +5,14 @@ function HeaderGuard()
 		gsub('.*/', ''):
 		gsub('%.', '_'):
 		upper() .. '_'
-	print(name)
-
-	vim.cmd('normal ggO#ifndef '..name)
-	vim.cmd('normal o#define '..name)
-	vim.cmd('normal o')
-	vim.cmd('normal Go')
-	vim.cmd('normal o#endif /* header guard */')
+	local cmds = {
+		'normal ggO#ifndef '..name,
+		'normal o#define '..name,
+		'normal o',
+		'normal Go',
+		'normal o#endif /* header guard */',
+	}
+	for _, cmd in ipairs(cmds) do vim.cmd(cmd) end
 	-- put cursor back
 	vim.api.nvim_win_set_cursor(0, cur_pos)
 end

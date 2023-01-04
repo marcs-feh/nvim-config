@@ -1,3 +1,5 @@
+--- Keybinings ---
+
 local def_key_opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
