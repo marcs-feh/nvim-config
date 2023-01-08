@@ -24,9 +24,8 @@ cmp.setup({
 		-- completion = cmp.config.window.bordered(),
 		-- documentation = cmp.config.window.bordered(),
 	},
-	completion = {
-		autocomplete = false,
-	},
+	completion = nil,
+	--completion = { autocomplete = false, },
 	mapping = cmp.mapping.preset.insert {
 		['<C-j>'] = cmp.mapping.scroll_docs(-4),
 		['<C-k>'] = cmp.mapping.scroll_docs(4),
@@ -38,14 +37,14 @@ cmp.setup({
 			else
 				cmp.complete()
 			end
-		end),
+		end, {'i', 'c'}),
 		['<Tab>'] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
 			else
 				fallback()
 			end
-		end, {'i'}),
+		end, {'i', 'c'}),
 		['<S-Tab>'] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_prev_item()

@@ -39,24 +39,6 @@ local C = {
 		base06 = '#f5f4f1', base07 = '#f9f8f5', base08 = '#f92672', base09 = '#fd971f', base0A = '#f4bf75', base0B = '#a6e22e',
 		base0C = '#a1efe4', base0D = '#66d9ef', base0E = '#ae81ff', base0F = '#cc6633',
 	},
-	['mf'] = {
-		base00 = '#131b1a', -- bg
-		base01 = '#1b2625', -- bg alt
-		base02 = '#2f4146', -- bg sel
-		base03 = '#496452', -- comments
-		base04 = '#d7cab5', -- fg dar
-		base05 = '#f0e2ca', -- fg
-		base06 = '#faecd3', -- fg li
-		base07 = '#233231', -- bg li
-		base08 = '#f0dab4', -- vars
-		base09 = '#98cd99', -- numbers
-		base0A = '#45b975', -- types
-		base0B = '#d79461', -- strings
-		base0C = '#faecd3', -- support
-		base0D = '#f0ea95', -- functions
-		base0E = '#7dd558', -- keywords
-		base0F = '#e6d8c2', -- regex, separators
-	},
 }
 
 function ListBase16Themes()

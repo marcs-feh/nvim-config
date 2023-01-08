@@ -5,7 +5,6 @@ require 'mf.core.languages'
 require 'mf.core.keys'
 require 'mf.core.colors'
 
-
 --- LSP configs
 local LSP = require 'mf.plug.lsp'
 LSP.setup_servers()

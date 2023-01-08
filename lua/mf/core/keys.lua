@@ -127,12 +127,12 @@ local term_prompt = '[%~]\n$ '
 keymap("n", "<leader>ts",
 		":split<CR>:resize "..term_height.."<CR>"
 	..":set nonumber<CR>:set signcolumn=no<CR>"
-	..":terminal<CR>aPS1=__ESC".. term_prompt .."__ESC<CR>clear<CR>")
+	..":terminal<CR>aPS1=\"".. term_prompt .."\"<CR>clear<CR>")
 -- Side terminal
 keymap("n", "<leader>tv",
 		":vsplit<CR>:vertical resize " .. term_width .."<CR>"
 	..":set nonumber<CR>:set signcolumn=no<CR>"
-	..":terminal<CR>aPS1=__ESC".. term_prompt .."__ESC<CR>clear<CR>")
+	..":terminal<CR>aPS1=\"".. term_prompt .."\"<CR>clear<CR>")
 
 -- Better terminal navigation
 keymap("t", "<A-h>", "<C-\\><C-N><C-w>h", term_opts)
