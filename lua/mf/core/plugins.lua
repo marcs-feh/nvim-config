@@ -69,6 +69,7 @@ return packer.startup(function(use)
 	use 'Mofiqul/vscode.nvim'
 	-- Non treesitter hightlighting
 	use 'zah/nim.vim'
+	use 'marcs-feh/odin.vim'
 
 	-- Automatically set up your config after cloning packer.nvim
 	-- Put this at the end after all plugins

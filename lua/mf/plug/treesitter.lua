@@ -16,7 +16,8 @@ configs.setup {
 
 }
 
--- Odin parser
+-- Odin parser (very unstable)
+--[[
 local parser_confs = require 'nvim-treesitter.parsers'.get_parser_configs()
 parser_confs.odin = {
 	install_info = {
@@ -26,4 +27,4 @@ parser_confs.odin = {
 	},
 	filetype = "odin",
 }
-
+--]]
